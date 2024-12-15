@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+find=${1}
+
+if [[ -z "${find}" ]]; then
+    echo "[error] No search string specified"
+    exit 1
+fi
+
+matches=$(git status --porcelain | awk '{print $2}' | grep "${find}")
+if [ $? -ne 0 ]; then
+    echo "No matches"
+    exit 1
+fi
+
+match_count=$(echo "${matches}" | wc -l | awk '{print $1}')
+echo ${matches} | xargs git add
+echo "Added ${match_count} files"

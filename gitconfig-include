@@ -1,0 +1,11 @@
+[alias]
+    add-grep = ! $GIT_ALIASES/git-grep-add
+    diff-grep = ! $GIT_ALIASES/git-diff-grep
+    diff-rust = ! $GIT_ALIASES/git-diff-rust
+    diff-smart = ! $GIT_ALIASES/git-diff-smart
+    set-upstream-to-origin = ! $GIT_ALIASES/git-set-upstream-to-origin
+    ag = add-grep
+    dg = diff-grep
+    drs = diff-rust
+    ds = diff-smart
+    suto = set-upstream-to-origin
