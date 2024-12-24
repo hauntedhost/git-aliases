@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -f Cargo.toml ]; then
-    echo "🦀 git-diff-rust"
-    $GIT_ALIASES/git-diff-rust
+    echo "🦀 git-diff-smart"
+    git diff -- . ':(exclude)Cargo.lock'
 else
   git diff
 fi
